@@ -1,22 +1,3 @@
-import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -27,7 +8,7 @@ export const RESUME_DATA = {
   about:
     "Frontend Engineer focused on building products with extra attention to detail",
   summary:
-    "As a Frontend Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
+    "Experienced Frontend Engineer with 5 years of expertise in building performant and scalable web applications using React and TypeScript. Passionate about crafting intuitive and engaging user interfaces that deliver exceptional user experiences. Proven ability to collaborate effectively within agile environments, translating complex requirements into elegant and maintainable code. Eager to contribute to innovative projects and continuously expand my skillset within the ever-evolving world of frontend development.",
   avatarUrl: "https://avatars.githubusercontent.com/u/40164360?v=4",
   contact: {
     email: "createdbymahmood@gmail.com",

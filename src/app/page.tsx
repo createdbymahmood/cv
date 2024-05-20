@@ -132,7 +132,11 @@ export default function Page() {
                   </h4>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
-                  {work.description}
+                  <ul className="flex list-inside list-disc flex-col gap-1.5">
+                    {work.achievements.map((achievement) => {
+                      return <li key={achievement}>{achievement}</li>;
+                    })}
+                  </ul>
                 </CardContent>
               </Card>
             );
@@ -167,7 +171,7 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
+        {/*  <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
@@ -182,20 +186,14 @@ export default function Page() {
               );
             })}
           </div>
-        </Section>
+        </Section> */}
       </section>
 
       <CommandMenu
-        links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
+        links={RESUME_DATA.contact.social.map((socialMediaLink) => ({
           url: socialMediaLink.url,
           title: socialMediaLink.name,
-          })),
-        ]}
+        }))}
       />
     </main>
   );

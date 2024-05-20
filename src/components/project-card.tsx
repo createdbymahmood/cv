@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Href } from "@/components/ui/href";
 
 interface Props {
   title: string;
@@ -21,14 +22,13 @@ export function ProjectCard({ title, description, tags, link }: Props) {
         <div className="space-y-1">
           <CardTitle className="text-base">
             {link ? (
-              <a
+              <Href
                 href={link}
-                target="_blank"
                 className="inline-flex items-center gap-1 hover:underline"
               >
                 {title}{" "}
                 <span className="size-1 rounded-full bg-green-500"></span>
-              </a>
+              </Href>
             ) : (
               title
             )}

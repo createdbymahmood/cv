@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { Href } from "@/components/ui/href";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -115,7 +116,12 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <Href className="hover:underline" href={work.link}>
+                      <Href
+                        className={cn("hover:underline", {
+                          "pointer-events-none": !work.link,
+                        })}
+                        href={work?.link}
+                      >
                         {work.company}
                       </Href>
 
@@ -131,7 +137,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums">
                       {work.start} - {work.end ?? "Present"}
                     </div>
                   </div>

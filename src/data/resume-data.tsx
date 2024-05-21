@@ -43,7 +43,7 @@ export const RESUME_DATA = {
     {
       company: "Heylama",
       link: "https://heylama.com",
-      badges: ["Remote", "Contract with Agileful"],
+      badges: ["Contract with Agileful"],
       title: "Frontend Engineer",
       start: "Jul 2021",
       end: "Sep 2023",
@@ -89,7 +89,7 @@ export const RESUME_DATA = {
     {
       company: "Freelance",
       link: "",
-      badges: [""],
+      badges: [],
       title: "Frontend Developer",
       start: "May 2018",
       end: "Sep 2019",

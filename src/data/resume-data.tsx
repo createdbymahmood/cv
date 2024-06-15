@@ -41,9 +41,24 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "ATA Software Group",
+      link: "https://heylama.com",
+      badges: ["Part-Time"],
+      title: "Technical Consultant",
+      start: "Oct 2023",
+      end: "Present",
+      achievements: [
+        "Provided comprehensive technical guidance in React and TypeScript, ensuring adherence to best practices and industry standards.",
+        "Led the architectural design and implementation of complex frontend projects, driving the adoption of modern development frameworks and tools.",
+        "Ensured code quality through rigorous code reviews, fostering a culture of clean, maintainable, and efficient code.",
+        "Kept the team informed of the latest trends and advancements in frontend technologies, facilitating the continuous improvement of our development practices.",
+        "Introduced and advocated for the adoption of new tools and methodologies, such as state management libraries, testing frameworks and build tools.",
+      ],
+    },
+    {
       company: "Heylama",
       link: "https://heylama.com",
-      badges: ["Contract with Agileful"],
+      badges: ["Full-Time", "Contract with Agileful"],
       title: "Frontend Engineer",
       start: "Jul 2021",
       end: "Sep 2023",
@@ -60,7 +75,7 @@ export const RESUME_DATA = {
     {
       company: "Agileful",
       link: "",
-      badges: ["Remote"],
+      badges: ["Full-Time", "Remote"],
       title: "Frontend Engineer",
       start: "Jan 2021",
       end: "Sep 2023",
@@ -75,7 +90,7 @@ export const RESUME_DATA = {
     {
       company: "Rectified AI",
       link: "",
-      badges: ["Remote"],
+      badges: ["Full-Time", "Remote"],
       title: "Frontend Developer",
       start: "Sep 2019",
       end: "Jan 2021",
@@ -89,7 +104,7 @@ export const RESUME_DATA = {
     {
       company: "Freelance",
       link: "",
-      badges: [],
+      badges: ["Full-Time"],
       title: "Frontend Developer",
       start: "May 2018",
       end: "Sep 2019",

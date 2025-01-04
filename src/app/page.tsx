@@ -27,7 +27,7 @@ export default function Page() {
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <Href
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+                className="mt-2 inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
               >
                 <GlobeIcon className="size-3" />
@@ -83,13 +83,10 @@ export default function Page() {
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
-          <Card className="pt-5">
-            <CardContent>
-              <p className="text-pretty font-mono text-sm text-muted-foreground">
-                {RESUME_DATA.summary}
-              </p>
-            </CardContent>
-          </Card>
+
+          <p className="text-pretty font-mono text-sm text-muted-foreground">
+            {RESUME_DATA.summary}
+          </p>
         </Section>
 
         <Section>
@@ -162,7 +159,7 @@ export default function Page() {
               <Card key={education.school}>
                 <CardHeader className="pb-1 pt-4">
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
+                    <h3 className="text-sm font-semibold leading-none">
                       {education.school}
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
@@ -170,7 +167,9 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2 text-sm">
+                  {education.degree}
+                </CardContent>
               </Card>
             );
           })}

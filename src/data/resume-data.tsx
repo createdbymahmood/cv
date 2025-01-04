@@ -33,8 +33,8 @@ export const RESUME_DATA = {
   },
   education: [
     {
-      school: "Azad university of Mashhad",
-      degree: "Bachelor's Degree in Software Engineering",
+      school: "IAUM",
+      degree: "Bachelor's degree/ Software Engineering",
       start: "2016",
       end: "2021",
     },
@@ -75,7 +75,7 @@ export const RESUME_DATA = {
     {
       company: "Heylama",
       link: "https://heylama.com",
-      badges: ["Full-Time", "Contract with Agileful"],
+      badges: ["Full-Time", "Contract"],
       title: "Frontend Engineer",
       start: "Jul 2021",
       end: "Sep 2023",

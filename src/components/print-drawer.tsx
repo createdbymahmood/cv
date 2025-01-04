@@ -31,7 +31,7 @@ export const PrintDrawer = () => {
           <DrawerFooter>
             <Button onClick={() => window.print()}>Print</Button>
             <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
+              <Button>Cancel</Button>
             </DrawerClose>
           </DrawerFooter>
         </div>

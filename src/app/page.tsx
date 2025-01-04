@@ -36,24 +36,14 @@ export default function Page() {
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
+                <Button className="size-8" size="icon" asChild>
                   <Href href={`mailto:${RESUME_DATA.contact.email}`}>
                     <MailIcon className="size-4" />
                   </Href>
                 </Button>
               ) : null}
               {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
+                <Button className="size-8" size="icon" asChild>
                   <Href href={`tel:${RESUME_DATA.contact.tel}`}>
                     <PhoneIcon className="size-4" />
                   </Href>
@@ -63,7 +53,6 @@ export default function Page() {
                 <Button
                   key={social.name}
                   className="size-8"
-                  variant="outline"
                   size="icon"
                   asChild
                 >
@@ -94,9 +83,13 @@ export default function Page() {
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
+          <Card className="pt-5">
+            <CardContent>
+              <p className="text-pretty font-mono text-sm text-muted-foreground">
+                {RESUME_DATA.summary}
+              </p>
+            </CardContent>
+          </Card>
         </Section>
 
         <Section>
@@ -127,11 +120,7 @@ export default function Page() {
 
                       <span className="inline-flex flex-wrap gap-1">
                         {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
+                          <Badge className="align-middle text-xs" key={badge}>
                             {badge}
                           </Badge>
                         ))}
@@ -147,7 +136,7 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
+                <CardContent className="mt-2 text-sm">
                   <ul className="flex list-inside list-disc flex-col gap-1.5">
                     {work.achievements.map((achievement) => {
                       return <li key={achievement}>{achievement}</li>;
@@ -164,7 +153,7 @@ export default function Page() {
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
-                <CardHeader>
+                <CardHeader className="pb-1 pt-4">
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
                       {education.school}

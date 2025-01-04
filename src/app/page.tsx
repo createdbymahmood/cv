@@ -105,7 +105,7 @@ export default function Page() {
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
-              <Card key={work.company}>
+              <Card key={`${work.title}-${work.start}`}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex flex-wrap items-center justify-start gap-1 font-semibold leading-none">
@@ -139,7 +139,14 @@ export default function Page() {
                 <CardContent className="mt-2 text-sm">
                   <ul className="flex list-inside list-disc flex-col gap-1.5">
                     {work.achievements.map((achievement) => {
-                      return <li key={achievement}>{achievement}</li>;
+                      return (
+                        <li
+                          className="relative m-0 list-none indent-3 before:absolute before:left-0 before:top-[8px] before:block before:size-[5px] before:bg-black"
+                          key={achievement}
+                        >
+                          {achievement}
+                        </li>
+                      );
                     })}
                   </ul>
                 </CardContent>

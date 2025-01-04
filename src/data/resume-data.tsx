@@ -41,7 +41,7 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Freelsnace",
+      company: "Freelance",
       link: "",
       badges: ["Full-Time"],
       title: "Frontend Engineer",

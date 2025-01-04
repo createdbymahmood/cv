@@ -41,6 +41,23 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Freelsnace",
+      link: "",
+      badges: ["Full-Time"],
+      title: "Frontend Engineer",
+      start: "Oct 2023",
+      end: "Present",
+      achievements: [
+        "Designed and maintained a dynamic dashboard platform featuring modular tools like chart generators, database builders, and customizable workspaces, enhancing platform management efficiency.",
+        "Developed advanced features such as AI-powered calendar scheduling, form builders, and time tracking, improving user productivity and task automation.",
+        "Engineered a highly scalable and responsive frontend architecture, ensuring optimal performance and user experience across diverse devices and browsers.",
+        "Collaborated cross-functionally with backend and design teams, delivering a cohesive platform that meets diverse client and stakeholder needs.",
+        "Implemented attribute-based access control (ABAC) and multi-role functionality, allowing for fine-grained and dynamic access control based on user attributes and roles.",
+        "Implemented data fetching and caching using TanStack React Query for optimized data handling and performance.",
+        "Integrated i18next and react-i18next for internationalization and localization, supporting multiple languages and regions.",
+      ],
+    },
+    {
       company: "ATA Software Group",
       link: "https://heylama.com",
       badges: ["Part-Time"],
@@ -48,11 +65,11 @@ export const RESUME_DATA = {
       start: "Oct 2023",
       end: "Present",
       achievements: [
-        "Provided comprehensive technical guidance in React and TypeScript, ensuring adherence to best practices and industry standards.",
-        "Led the architectural design and implementation of complex frontend projects, driving the adoption of modern development frameworks and tools.",
-        "Ensured code quality through rigorous code reviews, fostering a culture of clean, maintainable, and efficient code.",
-        "Kept the team informed of the latest trends and advancements in frontend technologies, facilitating the continuous improvement of our development practices.",
-        "Introduced and advocated for the adoption of new tools and methodologies, such as state management libraries, testing frameworks and build tools.",
+        "Architected and implemented scalable frontend solutions for complex projects, leveraging deep knowledge of design patterns and best practices.",
+        "Championed the adoption and integration of cutting-edge frontend technologies and tools, including state management libraries (Redux, Zustand), testing frameworks (Jest, React Testing Library), and build tools (Vite, Rsbuild).",
+        "Cultivated a culture of engineering excellence by conducting thorough code reviews, advocating for clean code principles, and mentoring junior developers.",
+        "Proactively researched and shared emerging frontend trends and best practices with the team, driving continuous improvement in development processes.",
+        "Streamlined development workflows by implementing efficient tooling and automation, resulting in increased productivity and reduced development time.",
       ],
     },
     {

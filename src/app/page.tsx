@@ -130,24 +130,7 @@ export default async function Page() {
               <Card key={`${work.title}-${work.start}`}>
                 <CardHeader>
                   <div className="flex flex-col gap-2 text-base sm:flex-row sm:items-start sm:justify-between">
-                    <h3 className="inline-flex flex-wrap items-center justify-start gap-1 font-semibold leading-none">
-                      <Href
-                        className={cn("hover:underline", {
-                          "pointer-events-none": !work.link,
-                        })}
-                        href={work?.link}
-                      >
-                        {work.company}
-                      </Href>
-
-                      <span className="inline-flex flex-wrap gap-1">
-                        {work.badges.map((badge) => (
-                          <Badge className="align-middle text-sm" key={badge}>
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
+                    <h3 className="font-semibold leading-none">{work.title}</h3>
 
                     <div className="text-base tabular-nums sm:text-right">
                       <span>{dateRange}</span>
@@ -160,9 +143,24 @@ export default async function Page() {
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-base leading-none">
-                    {work.title}
-                  </h4>
+                  <div className="inline-flex flex-wrap items-center justify-start gap-1 font-mono text-base leading-none">
+                    <Href
+                      className={cn("hover:underline", {
+                        "pointer-events-none": !work.link,
+                      })}
+                      href={work?.link}
+                    >
+                      {work.company}
+                    </Href>
+
+                    <span className="inline-flex flex-wrap gap-1">
+                      {work.badges.map((badge) => (
+                        <Badge className="align-middle text-sm" key={badge}>
+                          {badge}
+                        </Badge>
+                      ))}
+                    </span>
+                  </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-base">
                   <ResumeListMarkdown markdown={work.achievementsMarkdown} />

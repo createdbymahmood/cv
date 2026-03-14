@@ -14,9 +14,6 @@ social:
   - name: LinkedIn
     url: https://www.linkedin.com/in/createdbymahmood
     icon: LinkedIn
-  - name: X
-    url: https://x.com/callmemahmood
-    icon: X
 education:
   - school: IAUM
     degree: "Bachelor's degree/ Software Engineering"

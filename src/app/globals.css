@@ -17,6 +17,8 @@
   --border: #000;
   --text: #000;
   --mtext: #000; /* text that is placed on background with main color e.g. text color of default button */
+  --muted: #edf1f7;
+  --muted-foreground: #5f6673;
   --ring: #000;
   --ring-offset: #fff;
 
@@ -38,6 +40,8 @@
   --border: #000;
   --text: #e6e6e6;
   --mtext: #000;
+  --muted: #313544;
+  --muted-foreground: #a7b0c0;
   --ring: #fff;
   --ring-offset: #000;
 

@@ -25,6 +25,10 @@ module.exports = {
         blank: "var(--blank)",
         text: "var(--text)",
         mtext: "var(--mtext)",
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
         border: "var(--border)",
         ring: "var(--ring)",
         ringOffset: "var(--ring-offset)",

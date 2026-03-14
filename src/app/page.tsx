@@ -8,7 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { Href } from "@/components/ui/href";
-import { cn } from "@/lib/utils";
+import { cn, getDateRangeWithDurationParts } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -22,10 +22,10 @@ export default function Page() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+            <p className="text-muted-foreground max-w-md text-pretty font-mono text-sm">
               {RESUME_DATA.about}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="text-muted-foreground max-w-md items-center text-pretty font-mono text-xs">
               <Href
                 className="mt-2 inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
@@ -34,7 +34,7 @@ export default function Page() {
                 {RESUME_DATA.location}
               </Href>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="text-muted-foreground flex gap-x-1 pt-1 font-mono text-sm print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button className="size-8" size="icon" asChild>
                   <Href href={`mailto:${RESUME_DATA.contact.email}`}>
@@ -62,7 +62,7 @@ export default function Page() {
                 </Button>
               ))}
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+            <div className="text-muted-foreground hidden flex-col gap-x-1 font-mono text-sm print:flex">
               {RESUME_DATA.contact.email ? (
                 <Href href={`mailto:${RESUME_DATA.contact.email}`}>
                   <span className="underline">{RESUME_DATA.contact.email}</span>
@@ -84,7 +84,7 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">About</h2>
 
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-pretty font-mono text-sm">
             {RESUME_DATA.summary}
           </p>
         </Section>
@@ -101,10 +101,15 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
+            const { dateRange, duration } = getDateRangeWithDurationParts(
+              work.start,
+              work.end,
+            );
+
             return (
               <Card key={`${work.title}-${work.start}`}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
+                  <div className="flex flex-col gap-2 text-base sm:flex-row sm:items-start sm:justify-between">
                     <h3 className="inline-flex flex-wrap items-center justify-start gap-1 font-semibold leading-none">
                       <Href
                         className={cn("hover:underline", {
@@ -124,8 +129,14 @@ export default function Page() {
                       </span>
                     </h3>
 
-                    <div className="whitespace-nowrap text-sm tabular-nums">
-                      {work.start} - {work.end ?? "Present"}
+                    <div className="text-sm tabular-nums sm:text-right">
+                      <span>{dateRange}</span>
+                      {duration ? (
+                        <span className="text-muted-foreground">
+                          {" "}
+                          ({duration})
+                        </span>
+                      ) : null}
                     </div>
                   </div>
 

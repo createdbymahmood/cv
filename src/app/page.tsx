@@ -38,12 +38,15 @@ export default async function Page() {
             />
             <p className="text-muted-foreground items-center text-pretty font-mono text-sm">
               <Href
-                className="mt-2 inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+                className="mt-2 inline-flex gap-x-1.5 align-baseline leading-none hover:underline print:hidden"
                 href={resumeData.locationLink}
               >
                 <GlobeIcon className="size-3" />
                 {resumeData.location}
               </Href>
+              <span className="mt-2 hidden leading-none print:inline">
+                {resumeData.location}
+              </span>
             </p>
             <div className="text-muted-foreground flex gap-x-1 pt-1 font-mono text-base print:hidden">
               {resumeData.contact.email ? (
@@ -84,6 +87,13 @@ export default async function Page() {
                   <span className="underline">{resumeData.contact.tel}</span>
                 </Href>
               ) : null}
+              {resumeData.contact.social.map((social) => (
+                <Href key={social.name} href={social.url}>
+                  <span className="underline">
+                    {social.name}: {social.url}
+                  </span>
+                </Href>
+              ))}
             </div>
           </div>
 
@@ -154,13 +164,18 @@ export default async function Page() {
                       {work.company}
                     </Href>
 
-                    <span className="inline-flex flex-wrap gap-1">
+                    <span className="inline-flex flex-wrap gap-1 print:hidden">
                       {work.badges.map((badge) => (
                         <Badge className="align-middle text-sm" key={badge}>
                           {badge}
                         </Badge>
                       ))}
                     </span>
+                    {work.badges.length ? (
+                      <span className="text-muted-foreground hidden print:inline">
+                        {work.badges.join(", ")}
+                      </span>
+                    ) : null}
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-base">

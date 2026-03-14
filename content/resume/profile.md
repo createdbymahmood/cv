@@ -15,7 +15,7 @@ social:
     url: https://www.linkedin.com/in/createdbymahmood
     icon: LinkedIn
 education:
-  - school: IAUM
+  - school: Azad University
     degree: "Bachelor's degree/ Software Engineering"
     start: "2016"
     end: "2021"
@@ -174,8 +174,8 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 
 ### Collaboration & Workflows
 
-- Turborepo + Nx Cloud
 - Turborepo
+- Nx Cloud
 - Lerna
 - Changesets
 - Semantic Release
@@ -187,6 +187,7 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 
 ### ORMs
 
+- Mongoose
 - Prisma
 - TypeORM
 - Drizzle

@@ -143,7 +143,7 @@ export default async function Page() {
                     </div>
                   </div>
 
-                  <div className="inline-flex flex-wrap items-center justify-start gap-1 font-mono text-base leading-none">
+                  <div className="inline-flex flex-wrap items-center justify-start gap-x-3 gap-y-1 font-mono text-base leading-none">
                     <Href
                       className={cn("hover:underline", {
                         "pointer-events-none": !work.link,

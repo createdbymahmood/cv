@@ -111,11 +111,9 @@ export default async function Page() {
                 <h3 className="text-base font-semibold leading-none">
                   {group.title}
                 </h3>
-                <div className="flex flex-wrap gap-1">
-                  {group.skills.map((skill) => (
-                    <Badge key={`${group.title}-${skill}`}>{skill}</Badge>
-                  ))}
-                </div>
+                <p className="text-muted-foreground text-base leading-relaxed">
+                  {group.skills.join(", ")}
+                </p>
               </div>
             ))}
           </div>

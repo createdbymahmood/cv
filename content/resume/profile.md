@@ -63,7 +63,6 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - REST APIs
 - GraphQL
 - Apollo Client
-- TanStack Router
 - TanStack Query
 - Redux Toolkit Query
 - SWR

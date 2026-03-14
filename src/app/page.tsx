@@ -1,4 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// Keep this commented import for quick avatar restoration later. Do not remove.
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -32,10 +33,10 @@ export default async function Page() {
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{resumeData.name}</h1>
             <ResumeInlineMarkdown
-              className="text-muted-foreground max-w-md text-pretty font-mono text-base"
+              className="text-muted-foreground text-pretty font-mono text-base"
               markdown={resumeData.aboutMarkdown}
             />
-            <p className="text-muted-foreground max-w-md items-center text-pretty font-mono text-sm">
+            <p className="text-muted-foreground items-center text-pretty font-mono text-sm">
               <Href
                 className="mt-2 inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={resumeData.locationLink}
@@ -86,10 +87,12 @@ export default async function Page() {
             </div>
           </div>
 
+          {/* Keep this commented avatar block for quick restoration later. Do not remove.
           <Avatar className="size-28">
             <AvatarImage alt={resumeData.name} src={resumeData.avatarUrl} />
             <AvatarFallback>{resumeData.initials}</AvatarFallback>
           </Avatar>
+          */}
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>

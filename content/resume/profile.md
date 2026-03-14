@@ -50,6 +50,7 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - ABAC (Attribute-Based Access Control)
 - TDD
 - E2E Testing
+- Accessibility (WCAG / a11y)
 - PWAs
 - Agile/Scrum
 - Mentorship
@@ -62,11 +63,14 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - REST APIs
 - GraphQL
 - Apollo Client
+- TanStack Router
 - TanStack Query
 - Redux Toolkit Query
 - SWR
 - Orval
 - WebSockets
+- Real-Time Systems
+- Real-Time Data Streaming
 - Caching Strategies
 
 ### State Management
@@ -88,7 +92,6 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - Workbox
 - tRPC
 - T3 Stack
-- CRA
 
 ### AI-Assisted Development
 
@@ -113,9 +116,14 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - Storybook
 - Figma/Zeplin Collaboration
 - Framer Motion
+- Data Visualization
+- Mapbox
+- Three.js
+- React Three Fiber
 
 ### Forms
 
+- TanStack Form
 - React Hook Form
 - Formik
 
@@ -149,7 +157,14 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 
 ### Analytics & Error Monitoring
 
+- Frontend Observability / Monitoring
+- Telemetry
 - Sentry
+
+### Performance & Runtime
+
+- Web Workers
+- SSR / RSC / Server Components
 
 ### Static & Hybrid Content
 

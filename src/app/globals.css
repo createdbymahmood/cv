@@ -47,10 +47,3 @@
 
   --shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px var(--border);
 }
-
-[cmdk-list] {
-  min-height: 100px;
-  height: var(--cmdk-list-height);
-  max-height: 500px;
-  transition: height 100ms ease;
-}

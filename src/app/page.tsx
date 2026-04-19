@@ -27,16 +27,16 @@ export default async function Page() {
   const resumeData = await getResumeData();
 
   return (
-    <main className="relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+    <main className="relative mx-auto scroll-my-12 overflow-auto py-4 print:p-12 md:py-10">
+      <section className="container mx-auto w-full space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{resumeData.name}</h1>
             <ResumeInlineMarkdown
-              className="text-muted-foreground text-pretty font-mono text-base"
+              className="text-pretty font-mono text-base text-muted-foreground"
               markdown={resumeData.aboutMarkdown}
             />
-            <p className="text-muted-foreground items-center text-pretty font-mono text-sm">
+            <p className="items-center text-pretty font-mono text-sm text-muted-foreground">
               <Href
                 className="mt-2 inline-flex gap-x-1.5 align-baseline leading-none hover:underline print:hidden"
                 href={resumeData.locationLink}
@@ -48,7 +48,7 @@ export default async function Page() {
                 {resumeData.location}
               </span>
             </p>
-            <div className="text-muted-foreground flex gap-x-1 pt-1 font-mono text-base print:hidden">
+            <div className="flex gap-x-1 pt-1 font-mono text-base text-muted-foreground print:hidden">
               {resumeData.contact.email ? (
                 <Button className="size-8" size="icon" asChild>
                   <Href href={`mailto:${resumeData.contact.email}`}>
@@ -76,7 +76,7 @@ export default async function Page() {
                 </Button>
               ))}
             </div>
-            <div className="text-muted-foreground hidden flex-col gap-x-1 font-mono text-base print:flex">
+            <div className="hidden flex-col gap-x-1 font-mono text-base text-muted-foreground print:flex">
               {resumeData.contact.email ? (
                 <Href href={`mailto:${resumeData.contact.email}`}>
                   <span className="underline">{resumeData.contact.email}</span>
@@ -108,7 +108,7 @@ export default async function Page() {
           <h2 className="text-xl font-bold">About</h2>
 
           <ResumeInlineMarkdown
-            className="text-muted-foreground text-pretty font-mono text-base"
+            className="text-pretty font-mono text-base text-muted-foreground"
             markdown={resumeData.summaryMarkdown}
           />
         </Section>
@@ -121,7 +121,7 @@ export default async function Page() {
                 <h3 className="text-base font-semibold leading-none">
                   {group.title}
                 </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
+                <p className="text-base leading-relaxed text-muted-foreground">
                   {group.skills.join(", ")}
                 </p>
               </div>
@@ -172,7 +172,7 @@ export default async function Page() {
                       ))}
                     </span>
                     {work.badges.length ? (
-                      <span className="text-muted-foreground hidden print:inline">
+                      <span className="hidden text-muted-foreground print:inline">
                         {work.badges.join(", ")}
                       </span>
                     ) : null}

@@ -23,7 +23,7 @@ education:
 
 ## About
 
-**Senior Frontend Engineer** building scalable product platforms with React, TypeScript, and advanced AI-assisted engineering workflows powered by **Claude Code**, **Codex**, and modern developer tooling
+**Senior Frontend Engineer** building scalable product platforms with React, TypeScript, and advanced AI-assisted engineering workflows powered by **Claude Code**, **Codex**, and modern developer tooling.
 
 ## Summary
 
@@ -69,7 +69,6 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - Orval
 - WebSockets
 - Real-Time Systems
-- Real-Time Data Streaming
 - Caching Strategies
 
 ### State Management
@@ -96,16 +95,15 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 
 - Claude Code
 - OpenAI Codex
-- AI-Assisted Development
 - Agentic Coding Workflows
 
 ### UI & Styling
 
-- Material UI
-- Ant Design
-- Radix
 - Tailwind CSS
 - Shadcn
+- Radix
+- Material UI
+- Ant Design
 - Mantine
 - Styled-Components
 - Emotion
@@ -140,7 +138,9 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 ### DevOps & Deployment
 
 - Git
+- Github
 - GitHub Actions
+- Gitlab
 - Docker
 - Self-Hosted (Coolify, Dokploy)
 - Vercel

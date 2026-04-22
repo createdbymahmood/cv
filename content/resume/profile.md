@@ -31,170 +31,46 @@ Senior Frontend Engineer with **+8 years of experience** building scalable, high
 
 ## Skills
 
-### Languages & Frameworks
+### React & Frontend Engineering
 
-- JavaScript
-- TypeScript
-- HTML5
-- CSS3
-- Next.js
-- React
-- Remix
-- Node.js
-- Nest.js
-- Express
+- React, React DOM, Next.js, Remix, TanStack Router, TypeScript, JavaScript, HTML5, CSS3, SSR, SSG, ISR, RSC / Server Components, PWAs, Web Workers
 
-### Architecture & Practices
+### State, Data Fetching & API Tooling
 
-- Design Systems
-- ABAC (Attribute-Based Access Control)
-- TDD
-- E2E Testing
-- Accessibility (WCAG / a11y)
-- PWAs
-- Agile/Scrum
-- Mentorship
-- Performance Optimization
-- Responsive Design
-- Clean Code Principles
+- TanStack Query (React Query), Redux Toolkit, Redux Toolkit Query, Redux, Zustand, Context API, SWR, Apollo Client, GraphQL, REST APIs, tRPC, Orval, WebSockets, Real-Time Systems, Caching Strategies, Feature Flags, API Client Generation, Hook Generation
 
-### Data & Networking
+### UI Systems, Styling & Design Collaboration
 
-- REST APIs
-- GraphQL
-- Apollo Client
-- TanStack Query
-- Redux Toolkit Query
-- SWR
-- Orval
-- WebSockets
-- Real-Time Systems
-- Caching Strategies
+- Tailwind CSS, shadcn/ui, Radix UI, Storybook, Material UI (MUI), Ant Design, Mantine, styled-components, Emotion, JSS, SCSS, CSS-in-JS, Framer Motion, Figma, Zeplin
 
-### State Management
+### Forms, Validation & Content Systems
 
-- Zustand
-- Redux
-- Context API
+- React Hook Form, TanStack Form, Formik, Zod, class-validator, Yup, PayloadCMS, Nextra, dumi, Docmost
 
-### Tooling & Build
+### Testing, Quality & Observability
 
-- Vite
-- Rsbuild
-- Webpack
-- Babel
-- Rollup
-- ESLint
-- Prettier
-- Biome
-- Workbox
-- tRPC
-- T3 Stack
+- Jest, Vitest, React Testing Library, Cypress, Playwright, TDD, Unit & Integration Testing, E2E Testing, Sentry, Frontend Observability, Telemetry
 
-### AI-Assisted Development
+### Build, Tooling, Packages & Monorepos
 
-- Claude Code
-- OpenAI Codex
-- Agentic Coding Workflows
+- Vite, Rsbuild, Webpack, Babel, Rollup, Workbox, PostCSS, Autoprefixer, ESLint, Prettier, Biome, npm, pnpm, Bun, Turborepo, Nx Cloud, Lerna, Changesets, Semantic Release
 
-### UI & Styling
+### Delivery, Collaboration & Infrastructure
 
-- Tailwind CSS
-- Shadcn
-- Radix
-- Material UI
-- Ant Design
-- Mantine
-- Styled-Components
-- Emotion
-- JSS
-- SCSS
-- CSS-in-JS
-- Storybook
-- Figma/Zeplin Collaboration
-- Framer Motion
-- Data Visualization
-- Mapbox
-- Three.js
-- React Three Fiber
+- Git, GitHub, GitLab, GitHub Actions, Docker, Vercel, Coolify, Dokploy, CI/CD, Frontend Architecture, Design Systems, Platform Engineering, ABAC
 
-### Forms
+### Performance, Accessibility & Internationalization
 
-- TanStack Form
-- React Hook Form
-- Formik
+- Accessibility (WCAG / a11y), Performance Optimization, Responsive Design, Cross-Browser Compatibility, Lighthouse, Web Vitals, i18next, React-Intl, Internationalization & Localization
 
-### Testing
+### Advanced UI, Realtime & Visualization
 
-- Jest
-- Vitest
-- React Testing Library
-- Cypress
-- Enzyme
-- Playwright
-- Unit & Integration Testing
-- Lighthouse / Web Vitals
+- Data Visualization, Real-Time Dashboards, Mapbox, Three.js, React Three Fiber, WebSocket-Driven Interfaces
 
-### DevOps & Deployment
+### Backend & Data Layer
 
-- Git
-- Github
-- GitHub Actions
-- Gitlab
-- Docker
-- Self-Hosted (Coolify, Dokploy)
-- Vercel
-- CI/CD
+- Node.js, Nest.js, Express, PostgreSQL, MongoDB, Redis, Prisma, Drizzle, TypeORM, Mongoose
 
-### Other Strengths
+### AI-Assisted Engineering
 
-- Cross-Browser Compatibility
-- Internationalization & Localization (i18next, React-Intl)
-- API Integration
-- Code Generation Tools
-- Mentoring & Knowledge Sharing
-
-### Analytics & Error Monitoring
-
-- Frontend Observability / Monitoring
-- Telemetry
-- Sentry
-
-### Performance & Runtime
-
-- Web Workers
-- SSR / RSC / Server Components
-
-### Static & Hybrid Content
-
-- PayloadCMS
-- Nextra
-- dumi
-- Docmost
-
-### Collaboration & Workflows
-
-- Turborepo
-- Nx Cloud
-- Lerna
-- Changesets
-- Semantic Release
-
-### Databases
-
-- MongoDB
-- PostgreSQL
-- Redis
-
-### ORMs
-
-- Mongoose
-- Prisma
-- TypeORM
-- Drizzle
-
-### Validation
-
-- Zod
-- class-validator
-- Yup
+- Claude Code, OpenAI Codex, Agentic Coding Workflows

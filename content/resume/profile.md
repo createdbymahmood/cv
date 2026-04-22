@@ -27,7 +27,7 @@ education:
 
 ## Summary
 
-Senior Frontend Engineer with **+9 years of experience** building scalable, high-performance web applications and complex product platforms using **React** and **TypeScript**. Experienced in leading **frontend architecture**, designing maintainable systems, and delivering polished user experiences across dashboards, design systems, real-time applications, and data-intensive workflows. Advanced user of **AI-assisted development** tooling, including Claude Code, Codex, and related agentic coding workflows, to accelerate scaffolding, debugging, refactoring, code review, documentation, and day-to-day engineering execution. Strong track record of combining senior technical judgment with modern AI tooling to ship reliable, type-safe, and maintainable solutions while collaborating closely with product, design, and backend teams.
+Senior Frontend Engineer with **+8 years of experience** building scalable, high-performance web applications and complex product platforms using **React** and **TypeScript**. Experienced in leading **frontend architecture**, designing maintainable systems, and delivering polished user experiences across dashboards, design systems, real-time applications, and data-intensive workflows. Advanced user of **AI-assisted development** tooling, including Claude Code, Codex, and related agentic coding workflows, to accelerate scaffolding, debugging, refactoring, code review, documentation, and day-to-day engineering execution. Strong track record of combining senior technical judgment with modern AI tooling to ship reliable, type-safe, and maintainable solutions while collaborating closely with product, design, and backend teams.
 
 ## Skills
 

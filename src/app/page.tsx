@@ -113,6 +113,47 @@ export default async function Page() {
           />
         </Section>
 
+        {resumeData.projects.length ? (
+          <Section>
+            <h2 className="text-xl font-bold">Projects</h2>
+            {resumeData.projects.map((project) => {
+              const repoLabel = project.repo
+                ? project.repo.replace(/^https?:\/\//, "").replace(/\/$/, "")
+                : "";
+
+              return (
+                <Card key={project.name}>
+                  <CardHeader>
+                    <div className="flex flex-col gap-2 text-base sm:flex-row sm:items-start sm:justify-between">
+                      <h3 className="font-semibold leading-none">
+                        {project.link ? (
+                          <Href className="hover:underline" href={project.link}>
+                            {project.name}
+                          </Href>
+                        ) : (
+                          project.name
+                        )}
+                      </h3>
+                    </div>
+
+                    {project.repo ? (
+                      <div className="inline-flex flex-wrap items-center justify-start gap-x-2 gap-y-1 font-mono text-base leading-none">
+                        <span className="text-muted-foreground">GitHub:</span>
+                        <Href className="hover:underline" href={project.repo}>
+                          {repoLabel}
+                        </Href>
+                      </div>
+                    ) : null}
+                  </CardHeader>
+                  <CardContent className="mt-2 text-base">
+                    <ResumeListMarkdown markdown={project.descriptionMarkdown} />
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </Section>
+        ) : null}
+
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="space-y-4">

@@ -10,6 +10,7 @@ import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 const RESUME_CONTENT_DIR = path.join(process.cwd(), "content", "resume");
 const WORK_CONTENT_DIR = path.join(RESUME_CONTENT_DIR, "work");
+const PROJECT_CONTENT_DIR = path.join(RESUME_CONTENT_DIR, "projects");
 
 const SOCIAL_ICONS = {
   GitHub: GitHubIcon,
@@ -47,6 +48,13 @@ export interface ResumeWorkItem {
   achievementsMarkdown: string;
 }
 
+export interface ResumeProjectItem {
+  name: string;
+  link: string;
+  repo?: string;
+  descriptionMarkdown: string;
+}
+
 export interface ResumeData {
   name: string;
   initials: string;
@@ -66,6 +74,7 @@ export interface ResumeData {
   education: ResumeEducationItem[];
   skills: string[];
   work: ResumeWorkItem[];
+  projects: ResumeProjectItem[];
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -86,6 +95,14 @@ function expectStringArray(value: unknown, field: string): string[] {
   }
 
   return value;
+}
+
+function expectOptionalString(value: unknown, field: string): string | undefined {
+  if (value === undefined) {
+    return undefined;
+  }
+
+  return expectString(value, field);
 }
 
 function stripMarkdown(markdown: string) {
@@ -189,6 +206,18 @@ function parseEducation(value: unknown) {
   });
 }
 
+async function readDirIfExists(dir: string) {
+  try {
+    return await readdir(dir);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return [];
+    }
+
+    throw error;
+  }
+}
+
 async function loadProfileContent() {
   const source = await readFile(path.join(RESUME_CONTENT_DIR, "profile.md"), "utf8");
   const { content, data } = matter(source);
@@ -255,10 +284,27 @@ async function loadWorkItem(filename: string): Promise<ResumeWorkItem> {
   };
 }
 
+async function loadProjectItem(filename: string): Promise<ResumeProjectItem> {
+  const source = await readFile(path.join(PROJECT_CONTENT_DIR, filename), "utf8");
+  const { content, data } = matter(source);
+
+  if (!isRecord(data)) {
+    throw new Error(`Expected frontmatter in "${filename}" to be an object.`);
+  }
+
+  return {
+    name: expectString(data.name, `${filename}.name`),
+    link: expectString(data.link, `${filename}.link`),
+    repo: expectOptionalString(data.repo, `${filename}.repo`),
+    descriptionMarkdown: content.trim(),
+  };
+}
+
 export const getResumeData = cache(async (): Promise<ResumeData> => {
-  const [profile, workFiles] = await Promise.all([
+  const [profile, workFiles, projectFiles] = await Promise.all([
     loadProfileContent(),
     readdir(WORK_CONTENT_DIR),
+    readDirIfExists(PROJECT_CONTENT_DIR),
   ]);
 
   const work = await Promise.all(
@@ -268,8 +314,16 @@ export const getResumeData = cache(async (): Promise<ResumeData> => {
       .map((filename) => loadWorkItem(filename)),
   );
 
+  const projects = await Promise.all(
+    projectFiles
+      .filter((filename) => filename.endsWith(".md"))
+      .sort((left, right) => left.localeCompare(right))
+      .map((filename) => loadProjectItem(filename)),
+  );
+
   return {
     ...profile,
     work,
+    projects,
   };
 });

@@ -1,7 +1,6 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
 import { Geist_Mono as FontMono, Geist as FontSans } from "next/font/google";
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -38,7 +37,6 @@ export default function RootLayout({
       )}
     >
       <body>{children}</body>
-      <Analytics />
     </html>
   );
 }

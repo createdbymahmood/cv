@@ -170,6 +170,7 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - PayloadCMS
 - Nextra
 - dumi
+- Docmost
 
 ### Collaboration & Workflows
 
@@ -182,7 +183,8 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 ### Databases
 
 - MongoDB
-- Postgres
+- PostgreSQL
+- Redis
 
 ### ORMs
 
@@ -191,15 +193,8 @@ Senior Frontend Engineer with **+9 years of experience** building scalable, high
 - TypeORM
 - Drizzle
 
-### Queues
-
-- BullMQ
-
-### Caching
-
-- Redis
-
 ### Validation
 
 - Zod
 - class-validator
+- Yup

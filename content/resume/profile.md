@@ -31,9 +31,9 @@ With **+9 years of experience** building scalable, high-performance web applicat
 
 ## Skills
 
-### React & Frontend Engineering
+### Frontend Engineering
 
-- React, React DOM, Next.js, Remix, TanStack Router, TypeScript, JavaScript, HTML5, CSS3, SSR, SSG, ISR, RSC / Server Components, PWAs, Web Workers
+- TypeScript, JavaScript, HTML5, CSS3, React, Tanstack Start, Next.js, Remix, SSR, SSG, ISR, RSC / Server Components, PWAs, Web Workers
 
 ### State, Data Fetching & API Tooling
 
@@ -73,4 +73,4 @@ With **+9 years of experience** building scalable, high-performance web applicat
 
 ### AI-Assisted Engineering
 
-- Claude Code, OpenAI Codex, Agentic Coding Workflows
+- Claude Code, OpenAI Codex, Agentic Coding Workflows, Cursor, Opencode, Cline

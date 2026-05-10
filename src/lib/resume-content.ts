@@ -254,8 +254,6 @@ async function loadProfileContent() {
   return {
     name: expectString(data.name, "name"),
     initials: expectString(data.initials, "initials"),
-    location: expectString(data.location, "location"),
-    locationLink: expectString(data.locationLink, "locationLink"),
     about: stripMarkdown(aboutMarkdown),
     aboutMarkdown,
     summary: stripMarkdown(summaryMarkdown),

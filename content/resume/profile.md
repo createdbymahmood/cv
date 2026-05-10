@@ -1,8 +1,6 @@
 ---
 name: Mahmood Bagheri
 initials: MB
-location: Worldwide
-locationLink: https://www.google.com
 avatarUrl: https://avatars.githubusercontent.com/u/40164360?v=4
 contact:
   email: createdbymahmood@gmail.com
@@ -23,11 +21,11 @@ education:
 
 ## About
 
-**Frontend Engineer** building scalable product platforms with React, TypeScript, and advanced AI-assisted engineering workflows powered by **Claude Code**, **Codex**, and modern developer tooling.
+Frontend Engineer building scalable product platforms with React, TypeScript, and advanced AI-assisted engineering workflows powered by Claude Code, Codex, and modern developer tooling.
 
 ## Summary
 
-With **+9 years of experience** building scalable, high-performance web applications and complex product platforms using **React** and **TypeScript**. Experienced in leading **frontend architecture**, designing maintainable systems, and delivering polished user experiences across dashboards, design systems, real-time applications, and data-intensive workflows. Advanced user of **AI-assisted development** tooling, including Claude Code, Codex, and related agentic coding workflows, to accelerate scaffolding, debugging, refactoring, code review, documentation, and day-to-day engineering execution. Strong track record of combining senior technical judgment with modern AI tooling to ship reliable, type-safe, and maintainable solutions while collaborating closely with product, design, and backend teams.
+With **+9 years of experience** building scalable, high-performance web applications and complex product platforms using React and TypeScript. Experienced in leading frontend architecture, designing maintainable systems, and delivering polished user experiences across dashboards, design systems, real-time applications, and data-intensive workflows. Advanced user of AI-assisted development tooling, including Claude Code, Codex, and related agentic coding workflows, to accelerate scaffolding, debugging, refactoring, code review, documentation, and day-to-day engineering execution. Strong track record of combining senior technical judgment with modern AI tooling to ship reliable, type-safe, and maintainable solutions while collaborating closely with product, design, and backend teams.
 
 ## Skills
 

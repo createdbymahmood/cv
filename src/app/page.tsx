@@ -1,5 +1,4 @@
-// Keep this commented import for quick avatar restoration later. Do not remove.
-// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -32,22 +31,11 @@ export default async function Page() {
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="mb-5 text-2xl font-bold">{resumeData.name}</h1>
+
             <ResumeInlineMarkdown
               className="text-pretty font-mono text-base text-muted-foreground"
               markdown={resumeData.aboutMarkdown}
             />
-            <p className="items-center text-pretty font-mono text-sm text-muted-foreground">
-              <Href
-                className="mt-2 inline-flex gap-x-1.5 align-baseline leading-none hover:underline print:hidden"
-                href={resumeData.locationLink}
-              >
-                <GlobeIcon className="size-3" />
-                {resumeData.location}
-              </Href>
-              <span className="mt-2 hidden leading-none print:inline">
-                {resumeData.location}
-              </span>
-            </p>
             <div className="flex gap-x-1 pt-1 font-mono text-base text-muted-foreground print:hidden">
               {resumeData.contact.email ? (
                 <Button className="size-8" size="icon" asChild>
@@ -135,6 +123,7 @@ export default async function Page() {
                   <CardContent className="mt-2 text-base">
                     <ResumeListMarkdown
                       markdown={project.descriptionMarkdown}
+                      disableBullet
                     />
                   </CardContent>
                 </Card>

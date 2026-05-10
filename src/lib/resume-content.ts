@@ -97,7 +97,10 @@ function expectStringArray(value: unknown, field: string): string[] {
   return value;
 }
 
-function expectOptionalString(value: unknown, field: string): string | undefined {
+function expectOptionalString(
+  value: unknown,
+  field: string,
+): string | undefined {
   if (value === undefined) {
     return undefined;
   }
@@ -219,7 +222,10 @@ async function readDirIfExists(dir: string) {
 }
 
 async function loadProfileContent() {
-  const source = await readFile(path.join(RESUME_CONTENT_DIR, "profile.md"), "utf8");
+  const source = await readFile(
+    path.join(RESUME_CONTENT_DIR, "profile.md"),
+    "utf8",
+  );
   const { content, data } = matter(source);
 
   if (!isRecord(data)) {
@@ -232,7 +238,9 @@ async function loadProfileContent() {
   const skillsMarkdown = sections.skills;
 
   if (!aboutMarkdown || !summaryMarkdown || !skillsMarkdown) {
-    throw new Error('Expected "About", "Summary", and "Skills" sections in profile.md.');
+    throw new Error(
+      'Expected "About", "Summary", and "Skills" sections in profile.md.',
+    );
   }
 
   const contact = data.contact;
@@ -279,13 +287,18 @@ async function loadWorkItem(filename: string): Promise<ResumeWorkItem> {
     title: expectString(data.title, `${filename}.title`),
     start: expectString(data.start, `${filename}.start`),
     end:
-      data.end === undefined ? undefined : expectString(data.end, `${filename}.end`),
+      data.end === undefined
+        ? undefined
+        : expectString(data.end, `${filename}.end`),
     achievementsMarkdown: content.trim(),
   };
 }
 
 async function loadProjectItem(filename: string): Promise<ResumeProjectItem> {
-  const source = await readFile(path.join(PROJECT_CONTENT_DIR, filename), "utf8");
+  const source = await readFile(
+    path.join(PROJECT_CONTENT_DIR, filename),
+    "utf8",
+  );
   const { content, data } = matter(source);
 
   if (!isRecord(data)) {
@@ -295,7 +308,6 @@ async function loadProjectItem(filename: string): Promise<ResumeProjectItem> {
   return {
     name: expectString(data.name, `${filename}.name`),
     link: expectString(data.link, `${filename}.link`),
-    repo: expectOptionalString(data.repo, `${filename}.repo`),
     descriptionMarkdown: content.trim(),
   };
 }

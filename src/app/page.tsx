@@ -31,7 +31,7 @@ export default async function Page() {
       <section className="container mx-auto w-full space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{resumeData.name}</h1>
+            <h1 className="mb-5 text-2xl font-bold">{resumeData.name}</h1>
             <ResumeInlineMarkdown
               className="text-pretty font-mono text-base text-muted-foreground"
               markdown={resumeData.aboutMarkdown}
@@ -117,13 +117,9 @@ export default async function Page() {
           <Section>
             <h2 className="text-xl font-bold">Projects</h2>
             {resumeData.projects.map((project) => {
-              const repoLabel = project.repo
-                ? project.repo.replace(/^https?:\/\//, "").replace(/\/$/, "")
-                : "";
-
               return (
                 <Card key={project.name}>
-                  <CardHeader>
+                  <CardHeader className="!pb-2">
                     <div className="flex flex-col gap-2 text-base sm:flex-row sm:items-start sm:justify-between">
                       <h3 className="font-semibold leading-none">
                         {project.link ? (
@@ -135,18 +131,11 @@ export default async function Page() {
                         )}
                       </h3>
                     </div>
-
-                    {project.repo ? (
-                      <div className="inline-flex flex-wrap items-center justify-start gap-x-2 gap-y-1 font-mono text-base leading-none">
-                        <span className="text-muted-foreground">GitHub:</span>
-                        <Href className="hover:underline" href={project.repo}>
-                          {repoLabel}
-                        </Href>
-                      </div>
-                    ) : null}
                   </CardHeader>
                   <CardContent className="mt-2 text-base">
-                    <ResumeListMarkdown markdown={project.descriptionMarkdown} />
+                    <ResumeListMarkdown
+                      markdown={project.descriptionMarkdown}
+                    />
                   </CardContent>
                 </Card>
               );
@@ -227,7 +216,7 @@ export default async function Page() {
           })}
         </Section>
 
-        <Section>
+        {/* <Section>
           <h2 className="text-xl font-bold">Education</h2>
           {resumeData.education.map((education) => {
             return (
@@ -237,9 +226,6 @@ export default async function Page() {
                     <h3 className="text-base font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-base tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2 text-base">
@@ -248,7 +234,7 @@ export default async function Page() {
               </Card>
             );
           })}
-        </Section>
+        </Section> */}
       </section>
     </main>
   );
